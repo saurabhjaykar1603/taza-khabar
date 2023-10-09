@@ -36,10 +36,12 @@ function NewsArticals({
                   <p className="fs-6">{publishedAt}</p>
                 </div>
               </div>
-              <hr className="mt-4 "/>
-              <button type="button" className="btn btn-dark custom-button">
-                Read More
-              </button>
+              <hr className="mt-4 " />
+              <a href={url}>
+                <button type="button" className="btn btn-dark custom-button">
+                  Read More
+                </button>
+              </a>
             </div>
           </div>
         </div>
