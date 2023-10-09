@@ -14,19 +14,20 @@ function NewsArticals({
     <>
       <div className="my-4 ">
         <div className=" news-card-container shadow rounded-1">
-          <div className="card-body">
+          <div className="card-body custom-body">
             <div className="">
               <img
                 src={urlToImage}
                 alt=""
                 className="img-fluid d-block mx-auto news-img rounded-1"
-                style={{ height: "200px", width: "290px" }}
+                style={{ height: "200px", width: "370px" }}
               />
             </div>
-            <div className="container mt-2">
+            <div className="container my-3">
               <p className="fs-6 fw-bold text-center">{title}</p>
             </div>
-            <div className="container">
+
+            <div className="container my-4">
               <div className="row">
                 <div className="col-md-6">
                   <p className="fs-6">{author}</p>
@@ -35,6 +36,10 @@ function NewsArticals({
                   <p className="fs-6">{publishedAt}</p>
                 </div>
               </div>
+              <hr className="mt-4 "/>
+              <button type="button" className="btn btn-dark custom-button">
+                Read More
+              </button>
             </div>
           </div>
         </div>
