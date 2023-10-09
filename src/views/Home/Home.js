@@ -5,12 +5,13 @@ import "./Home.css";
 
 function Home() {
   const [news, setNews] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("pune");
 
   //   load news func
   const loadNews = async () => {
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=tesla&from=2023-09-08&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://newsapi.org/v2/everything?q=${searchQuery}&from=2023-09-08&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
       );
 
       setNews(response.data.articles);
@@ -23,10 +24,30 @@ function Home() {
     loadNews();
   }, []);
 
+  useEffect(() => {
+    loadNews();
+  }, [searchQuery]);
+
   return (
     <>
-      <div className="container my-4 py-2 w-50  rounded" style={{backgroundColor: "#5DB1FF"}}>
+      <div
+        className="container my-4 py-2 w-50  rounded"
+        style={{ backgroundColor: "#5DB1FF" }}
+      >
         <h1 className="text-center">Tazza Khabar</h1>
+      </div>
+      <div className="container w-50">
+        <form>
+          <input
+            type="text "
+            className="form-control"
+            placeholder="Enter News Here"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+            }}
+          />
+        </form>
       </div>
 
       <div
