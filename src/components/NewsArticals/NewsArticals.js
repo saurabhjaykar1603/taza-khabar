@@ -1,4 +1,5 @@
 import React from "react";
+import "./NewsArticals.css";
 
 function NewsArticals({
   author,
@@ -11,19 +12,19 @@ function NewsArticals({
 }) {
   return (
     <>
-      <div className="container mt-4">
-        <div className="card shadow-lg" style={{ width: "30rem" }}>
+      <div className="my-4 ">
+        <div className=" news-card-container shadow rounded-1">
           <div className="card-body">
-            <div className="container-fluid">
+            <div className="">
               <img
                 src={urlToImage}
                 alt=""
-                className="img-fluid d-block mx-auto"
-                style={{ height: "220px" }}
+                className="img-fluid d-block mx-auto news-img rounded-1"
+                style={{ height: "200px", width: "290px" }}
               />
             </div>
             <div className="container mt-2">
-              <p className="fs-5 fw-bold text-center">{title}</p>
+              <p className="fs-6 fw-bold text-center">{title}</p>
             </div>
             <div className="container">
               <div className="row">

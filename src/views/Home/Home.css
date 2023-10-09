@@ -1,0 +1,15 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #F1FAFF!important;
+}
+.news-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  justify-content: space-evenly !important;
+}
+
+.news-img {
+  object-fit: cover !important;
+}
