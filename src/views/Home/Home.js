@@ -31,10 +31,10 @@ function Home() {
   return (
     <>
       <div
-        className="container my-4 py-2 w-50  rounded"
+        className="container my-4 py-2 w-50 shadow rounded"
         style={{ backgroundColor: "#5DB1FF" }}
       >
-        <h1 className="text-center">Tazza Khabar</h1>
+        <h1 className="text-center fw-bold">Tazza Khabar 📰</h1>
       </div>
       <div className="container w-50">
         <form>
